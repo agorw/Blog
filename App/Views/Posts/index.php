@@ -15,7 +15,7 @@
     <div class="col-sm-10">
         <div class="m-5">
             <h1>Bienvenue sur Agorw.fr</h1>
-            <p>Ce blog est destiné a publier ma penser personnel elle n'est pas a prendre pour agent content.</p>
+            <p>Ce blog est destiné à publier ma pensée personnel. Elle n'est pas a prendre pour agent content.</p>
         </div>
     </div>
 </div>

@@ -16,7 +16,7 @@ class AppController extends Controller
         $this->viewPath = ROOT.'/App/Views/';
     }
 
-    public function loadModel($nameModel){
+    public function loadModel(string $nameModel){
         $this->$nameModel = App::getInstance()->getTable($nameModel);
     }
 }

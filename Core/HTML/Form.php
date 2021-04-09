@@ -8,12 +8,12 @@ class Form
 
     public $surround = 'p';
 
-    public function __construct($data = [])
+    public function __construct(array $data = [])
     {
         $this->data = $data;
     }
 
-    protected function surround($html)
+    protected function surround(string $html)
     {
         return "<{$this->surround}>$html</{$this->surround}>";
     }
@@ -26,13 +26,13 @@ class Form
         return isset($this->data[$index]) ? $this->data[$index] : null;
     }
 
-    public function input($name,$label=null,$option=[])
+    public function input(string $name,string $label=null,array $option=[])
     {   
         $type = isset($option['type'])? $option['type']:'text';
         return $this->surround('<input type="'.$type.'" name="' . $name . '" value="' . $this->getValue($name) . '">');
     }
 
-    public function submit($name)
+    public function submit(string $name)
     {
         return $this->surround('<button type="submit" >' . $name . '</button>');
     }

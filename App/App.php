@@ -26,7 +26,7 @@ class App
         Core\Autoloader::register();
     }
 
-    public function getTable($name)
+    public function getTable(string $name)
     {
         $class_name = '\\Agorw\\Table\\' . ucfirst($name) . 'Table';
         return new $class_name($this->getDB());

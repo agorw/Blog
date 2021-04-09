@@ -9,7 +9,7 @@ class Controller
     protected $template;
 
 
-    protected function render($view, $variables = [])
+    protected function render(string $view, array $variables)
     {
         ob_start();
         extract($variables);

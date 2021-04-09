@@ -30,7 +30,7 @@ class MysqlDatabase extends Database
         return $this->pdo;
     }
 
-    public function query($statement, $class_name = null, $one = false)
+    public function query(string $statement, $class_name = null, bool $one = false)
     {
         $req = $this->getPDO()->query($statement);
                 if (
@@ -52,7 +52,7 @@ class MysqlDatabase extends Database
         return $datas;
     }
 
-    public function prepare($statement, $param, $class_name = null, $one = false)
+    public function prepare(string $statement, array $param, $class_name = null, bool $one = false)
     {
         $rep = $this->getPDO()->prepare($statement);
         $res = $rep->execute($param);

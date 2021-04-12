@@ -7,12 +7,12 @@ use Core\HTML\Form;
 class BootstrapForm extends Form
 {
 
-    protected function surround(string $html)
+    protected function surround($html)
     {
         return "<div class=\"form-group\">$html</div>";
     }
 
-    public function input(string $name,string $label = null, array $option = [])
+    public function input($name, $label = null, $option = [])
     {
         $lab = ($label === null) ? $name : $label;
         $type = isset($option['type']) ? $option['type'] : 'text';
@@ -40,8 +40,11 @@ class BootstrapForm extends Form
         $input .= '</select>';
         return $this->surround($label . $input);
     }
-
-    public function submit(string $name)
+    /**
+     * @param string $name
+     * @return string
+     */
+    public function submit($name)
     {
         return $this->surround('<button class="btn btn-primary mt-2" type="submit" >' . $name . '</button>');
     }
